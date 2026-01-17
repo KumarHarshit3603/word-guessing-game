@@ -51,9 +51,9 @@ function App() {
       alignItems: "center"
     }}>
       <div>
-          {isWinner && "You Win! - Refresh to try again"}
-          <div>The correct word is {wordToGuess}</div>
-          {isLoser && "You Lose! - Refresh to try again"}
+          {isWinner && "You Win! - Refresh to try again "}
+          <div></div>
+          {isLoser && "You Lose! - Refresh to try again The correct word is: "}{isLoser && wordToGuess}
       </div>
       <HangmanDrawing numberOfGuessess={incorrectLetters.length}/>
       <Hangmanword guessedLetters={guessedLetters} wordToGuess={wordToGuess}/>
